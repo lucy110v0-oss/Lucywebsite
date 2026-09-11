@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BloomTalk 🌷</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Bloom<span>Talk</span> 🌷</div>
+  <div class="top-actions">
+    <button id="languageButton" class="outline-btn">English</button>
+    <button id="profileButton" class="avatar-button">L</button>
+  </div>
+</header>
+
+<main class="app">
+  <aside class="sidebar card">
+    <div class="flower">✿</div>
+    <h1 data-i18n="customize">定制你的聊天对象</h1>
+    <p data-i18n="customizeDesc">选择一个喜欢的聊天性格，你可以随时修改。</p>
+
+    <h3 data-i18n="personality">聊天性格</h3>
+    <div class="personality-list">
+      <button data-personality="gentle">🌷 温柔倾听型</button>
+      <button data-personality="friend">🧸 好朋友型</button>
+      <button data-personality="rational">☁️ 理性陪伴型</button>
+      <button data-personality="cheer">🌟 鼓励成长型</button>
+      <button data-personality="study">📚 学习搭子型</button>
+    </div>
+
+    <div class="setting">
+      <label><span data-i18n="warmth">温柔程度</span><b id="warmValue">80%</b></label>
+      <input id="warmSlider" type="range" min="0" max="100" value="80">
+    </div>
+
+    <div class="setting">
+      <label><span data-i18n="length">回复长度</span><b id="lengthValue">60%</b></label>
+      <input id="lengthSlider" type="range" min="20" max="100" value="60">
+    </div>
+
+    <button id="clearButton" class="clear-btn" data-i18n="clear">清空聊天</button>
+    <p class="privacy" data-i18n="privacy">本地版本：聊天记录保存在当前浏览器，不会自动上传到网络。</p>
+  </aside>
+
+  <section class="chat-panel card">
+    <div class="chat-header">
+      <div id="botAvatar" class="bot-avatar">🌷</div>
+      <div>
+        <strong id="botName">Bloom · 温柔倾听型</strong>
+        <small id="onlineText">● 在线陪你聊天</small>
+      </div>
+      <button id="rulesButton" class="info-btn">♡</button>
+    </div>
+
+    <div id="messages" class="messages"></div>
+    <div id="quickTopics" class="quick-topics"></div>
+
+    <div class="composer">
+      <textarea id="messageInput" rows="1" data-i18n-placeholder="placeholder" placeholder="想说什么都可以……"></textarea>
+      <button id="sendButton" class="send-btn" data-i18n="send">发送</button>
+    </div>
+  </section>
+</main>
+
+<div id="profileModal" class="modal">
+  <div class="modal-card">
+    <button class="close" data-close="profileModal">×</button>
+    <h2 data-i18n="profile">🌷 我的资料</h2>
+    <div class="profile-preview">
+      <div class="profile-large">L</div>
+      <div><b>Lucy</b><small data-i18n="student">学生</small></div>
+    </div>
+    <label data-i18n="language">语言</label>
+    <select id="profileLanguage"><option value="zh">中文</option><option value="en">English</option></select>
+    <label data-i18n="about">关于我</label>
+    <textarea data-i18n-placeholder="aboutPlaceholder" placeholder="写一点关于自己的事情……"></textarea>
+    <button class="save-btn" data-close="profileModal" data-i18n="save">保存</button>
+  </div>
+</div>
+
+<div id="rulesModal" class="modal">
+  <div class="modal-card">
+    <button class="close" data-close="rulesModal">×</button>
+    <h2 data-i18n="rules">🌸 聊天小规则</h2>
+    <ul id="rulesList"></ul>
+    <button class="save-btn" data-close="rulesModal" data-i18n="gotIt">知道了</button>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
