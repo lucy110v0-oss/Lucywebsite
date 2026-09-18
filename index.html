@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BloomTalk ♡</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="petal">✿</div>
+<header><div class="brand"><span class="logo">✿</span><div><b>BloomTalk</b><small>a little space to talk ♡</small></div></div>
+<nav><button id="theme">☼</button><button id="lang">EN</button><button id="profile">♡ <span data-i="profile">我的资料</span></button></nav></header>
+<main>
+<aside class="panel side"><div class="sidehead"><div><small>CHOOSE YOUR VIBE</small><h2 data-i="style">聊天风格</h2></div><span>✦</span></div>
+<div class="people">
+<button class="person active" data-p="gentle"><i class="lav">☁</i><span><b data-i="gentle">温柔倾听型</b><em data-i="gd">安静地听你说</em></span><strong>✓</strong></button>
+<button class="person" data-p="friend"><i class="pea">♡</i><span><b data-i="friend">好朋友型</b><em data-i="fd">像朋友一样聊天</em></span><strong>✓</strong></button>
+<button class="person" data-p="rational"><i class="blu">◌</i><span><b data-i="rational">理性陪伴型</b><em data-i="rd">一起整理思路</em></span><strong>✓</strong></button>
+<button class="person" data-p="cheer"><i class="yel">✦</i><span><b data-i="cheer">鼓励成长型</b><em data-i="cd">给你一点动力</em></span><strong>✓</strong></button>
+<button class="person" data-p="study"><i class="mint">✎</i><span><b data-i="study">学习搭子型</b><em data-i="sd">一起学习和规划</em></span><strong>✓</strong></button></div>
+<div class="custom"><b>♡ <span data-i="custom">Customize</span></b><label><span data-i="warm">温暖程度</span><output id="wv">75%</output></label><input id="warmth" type="range" value="75"><label><span data-i="length">回复长度</span><output id="lv">55%</output></label><input id="length" type="range" value="55"></div>
+<button class="rules" id="rules">ⓘ <span data-i="rules">使用规则</span></button></aside>
+
+<section class="panel chat"><div class="chathead"><div class="bloom"><span class="avatar">✿<i></i></span><div><b>Bloom</b><small data-i="online">在线 · 随时可以聊聊</small></div></div><button id="clear">⌫ <span data-i="clear">清空</span></button></div>
+<div class="messages" id="messages"></div>
+<div class="topics"><small data-i="topic">START WITH A TOPIC</small><div><button>今天过得怎么样？</button><button>我最近有点烦</button><button>陪我聊聊天</button><button>我需要学习建议</button></div></div>
+<form id="form"><div class="input"><span>♡</span><textarea id="input" rows="1" placeholder="输入你想说的话……"></textarea><button>➤</button></div><small>✦ <span data-i="local">聊天记录只保存在这个浏览器中。</span></small></form></section>
+</main>
+
+<div class="modal" id="profileModal"><div class="modalbox"><button class="x">×</button><div class="modalicon">♡</div><h2 data-i="profile">我的资料</h2><p>Customize your little space.</p><label data-i="name">名字</label><input id="name" placeholder="Lucy"><label data-i="language">语言</label><select id="language"><option value="zh">中文</option><option value="en">English</option></select><button class="save" id="save" data-i="save">保存</button></div></div>
+<div class="modal" id="rulesModal"><div class="modalbox"><button class="x">×</button><div class="modalicon">✿</div><h2 data-i="ruleTitle">使用规则</h2><p>♡ <span data-i="r1">不要分享密码、家庭住址、银行卡等私人信息。</span></p><p>♡ <span data-i="r2">BloomTalk 是一个本地聊天原型，不是专业心理咨询服务。</span></p><p>♡ <span data-i="r3">如果你遇到现实中的紧急危险，请联系可信任的成年人或当地紧急服务。</span></p></div></div>
+<div id="toast"></div><script src="script.js"></script></body></html>
